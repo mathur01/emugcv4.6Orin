@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Emgu.CV</id>
+	<title>Emgu CV</title>
+    <version>...0</version>
+    <authors>Emgu Corporation</authors>
+    <owners>Emgu Corporation</owners>
+    <license type="file">LICENSE.txt</license>
+    <projectUrl>https://www.emgu.com</projectUrl>
+	<repository type="git" url="https://github.com/emgucv/emgucv" />
+	<icon>icon.png</icon>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+	<summary>Emgu CV is a cross platform .Net wrapper to the OpenCV image processing library.</summary>
+    <description>Emgu CV is a cross platform .Net wrapper to the OpenCV image processing library. Allowing OpenCV functions to be called from .NET compatible languages such as C#, VB, VC++, IronPython etc. </description>
+    <releaseNotes>This is the .. release of Emgu CV. For online documentation please visit
+https://www.emgu.com/wiki/files/../document/index.html    	        
+    </releaseNotes>
+	<readme>docs\README.md</readme>
+	
+	<dependencies>
+ 
+      <group targetFramework="Xamarin.iOS1.0">
+        <dependency id="System.Drawing.Primitives" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime" version="4.3.1" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.InteropServices.RuntimeInformation" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+	  <group targetFramework="net6.0-maccatalyst13.2">
+        <dependency id="System.Drawing.Primitives" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime" version="4.3.1" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.InteropServices.RuntimeInformation" version="4.3.0" exclude="Build,Analyzers" />
+		<dependency id="System.Runtime.InteropServices.NFloat.Internal" version="6.0.1" exclude="Build,Analyzers" />
+      </group>
+	  <group targetFramework="net6.0-ios11.0">
+        <dependency id="System.Drawing.Primitives" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime" version="4.3.1" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.InteropServices.RuntimeInformation" version="4.3.0" exclude="Build,Analyzers" />
+		<dependency id="System.Runtime.InteropServices.NFloat.Internal" version="6.0.1" exclude="Build,Analyzers" />
+      </group> 
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.Drawing.Primitives" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime" version="4.3.1" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.InteropServices.RuntimeInformation" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+	
+    <copyright>© Emgu Corporation 2024. All rights reserved.</copyright>
+    <tags>opencv emgu emgucv ai image</tags>
+  </metadata>
+  <files>
+     
+    <file src="..\..\..\libs\iOS\Emgu.CV.dll" target="lib\xamarinios10" />
+    <file src="..\..\..\libs\iOS\Emgu.CV.xml" target="lib\xamarinios10" />
+	<file src="..\..\..\libs\iOS\Emgu.CV.dll" target="lib\net6.0-maccatalyst13.2" />
+    <file src="..\..\..\libs\iOS\Emgu.CV.xml" target="lib\net6.0-maccatalyst13.2" />
+	<file src="..\..\..\libs\iOS\Emgu.CV.dll" target="lib\net6.0-ios11.0" />
+    <file src="..\..\..\libs\iOS\Emgu.CV.xml" target="lib\net6.0-ios11.0" />
+	 
+    <file src="..\..\..\libs\Emgu.CV.dll" target="lib\netstandard2.0" />
+    <file src="..\..\..\libs\Emgu.CV.xml" target="lib\netstandard2.0" />
+    <file src="..\..\..\miscellaneous\nuget_icon.png" target="icon.png" />
+    <file src="..\..\..\LICENSE.txt" target="" />
+	<file src="README.md" target="docs\" />
+  </files>
+</package>

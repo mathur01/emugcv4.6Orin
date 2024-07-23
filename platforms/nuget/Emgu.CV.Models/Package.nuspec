@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Emgu.CV.Models</id>
+	<title>Experimental component to help download, initialize and execute image processing/AI models.</title>
+    <version>...0</version>
+    <authors>Emgu Corporation</authors>
+    <owners>Emgu Corporation</owners>
+    <license type="file">LICENSE.txt</license>
+    <projectUrl>https://www.emgu.com</projectUrl>
+	<repository type="git" url="https://github.com/emgucv/emgucv" />
+	<icon>icon.png</icon>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+	<summary>Experimental component to help download, initialize and execute image processing/AI models. This is under active development and API may change from time to time.</summary>
+    <description>Emgu CV is a cross platform .Net wrapper to the OpenCV image processing library. Allowing OpenCV functions to be called from .NET compatible languages such as C#, VB, VC++, IronPython etc. </description>
+    <releaseNotes>This is the .. release of Emgu CV. For online documentation please visit
+https://www.emgu.com/wiki/files/../document/index.html    	        
+    </releaseNotes>
+	<readme>docs\README.md</readme>
+	
+	<dependencies>
+ 
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.Drawing.Common" version="6.0.0" exclude="Build,Analyzers" />
+		<dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+        <dependency id="Emgu.CV" version="...0" />
+      </group>
+    </dependencies>
+    <copyright>© Emgu Corporation 2024. All rights reserved.</copyright>
+    <tags>opencv emgu emgucv ai image</tags>
+  </metadata>
+  <files>
+     
+    <file src="..\..\..\libs\Emgu.CV.Models.dll" target="lib\netstandard2.0" />
+    <file src="..\..\..\libs\Emgu.CV.Models.xml" target="lib\netstandard2.0" />
+    <file src="..\..\..\miscellaneous\nuget_icon.png" target="icon.png" />
+    <file src="..\..\..\LICENSE.txt" target="" />
+	<file src="README.md" target="docs\" />
+  </files>
+</package>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Emgu.CV.Wpf</id>
+	<title>WPF extension for Emgu CV</title>
+    <version>...0</version>
+    <authors>Emgu Corporation</authors>
+    <owners>Emgu Corporation</owners>
+    <license type="file">LICENSE.txt</license>
+    <projectUrl>https://www.emgu.com</projectUrl>
+	<repository type="git" url="https://github.com/emgucv/emgucv" />
+	<icon>icon.png</icon>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+	<summary>This package add extension method to convert BitmapSource to and from Emgu objects (e.g. Mat)</summary>
+    <description>Emgu CV is a cross platform .Net wrapper to the OpenCV image processing library. Allowing OpenCV functions to be called from .NET compatible languages such as C#, VB, VC++, IronPython etc. </description>
+    <releaseNotes>This is the .. release of Emgu CV. For online documentation please visit
+https://www.emgu.com/wiki/files/../document/index.html    	        
+    </releaseNotes>
+	<readme>docs\README.md</readme>
+	
+	<dependencies>
+ 
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+        <dependency id="Emgu.CV.Bitmap" version="...0" />
+      </group>
+    </dependencies>
+    <copyright>© Emgu Corporation 2024. All rights reserved.</copyright>
+    <tags>opencv emgu emgucv ai image</tags>
+  </metadata>
+  <files>
+     
+    <file src="..\..\..\libs\Emgu.CV.Wpf.dll" target="lib\netcoreapp3.1" />
+    <file src="..\..\..\libs\Emgu.CV.Wpf.xml" target="lib\netcoreapp3.1" />
+    <file src="..\..\..\miscellaneous\nuget_icon.png" target="icon.png" />
+    <file src="..\..\..\LICENSE.txt" target="" />
+	<file src="README.md" target="docs\" />
+  </files>
+</package>

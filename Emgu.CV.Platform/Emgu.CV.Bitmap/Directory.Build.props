@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Project>
+ <PropertyGroup>
+    <PackageId>Emgu.CV.Bitmap</PackageId>
+	
+	<title>Bitmap extension for Emgu CV</title>
+    <version>...0</version>
+    <authors>Emgu Corporation</authors>
+    <owners>Emgu Corporation</owners>
+	<summary>This package add extension method to convert Bitmap to and from Emgu objects (e.g. Mat, UMat, GpuMat)</summary>
+    <Description>This package add extension method to convert Bitmap to and from Emgu objects (e.g. Mat, UMat, GpuMat)</Description>
+    <PackageReleaseNotes>This is the .. release of Emgu CV. For online documentation please visit
+https://www.emgu.com/wiki/files/../document/index.html    	        
+</PackageReleaseNotes>
+	
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<PackageIcon>nuget_icon.png</PackageIcon>
+    <PackageReadmeFile>docs\README.md</PackageReadmeFile>
+	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	<RepositoryUrl>https://github.com/emgucv/emgucv</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageOutputPath>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\..\platforms\nuget))</PackageOutputPath>
+	<PackageTags>opencv;emgu;emgucv;ai;image;bitmap;mat;umat</PackageTags>
+    <PackageProjectUrl>https://www.emgu.com</PackageProjectUrl>
+    <copyright>© Emgu Corporation 2024. All rights reserved.</copyright>
+    
+ </PropertyGroup>
+ 
+    <ItemGroup>
+      <None Include="..\..\LICENSE.txt">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+      <None Include="..\..\miscellaneous\nuget_icon.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="docs\README.md">
+        <Pack>True</Pack>
+        <PackagePath>docs\</PackagePath>
+      </None>
+    </ItemGroup>
+  <Target Name="PostProcessBinary" AfterTargets="PostBuildEvent">
+    <Message Text="Copying $(OutputPath)$(AssemblyName).dll, $(OutputPath)$(AssemblyName).xml to $(OpenCVBinaryDir)" Importance="high" />
+    <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="$(OpenCVBinaryDir)" ContinueOnError="true" />
+    <Copy SourceFiles="$(OutputPath)$(AssemblyName).xml" DestinationFolder="$(OpenCVBinaryDir)" ContinueOnError="true" />
+  </Target>
+  
+</Project>
